@@ -12,6 +12,5 @@ RUN useradd builder -m && \
     chown builder -R /home/builder
 
 USER builder
-ADD build/ /home/builder/build/
 
 ENTRYPOINT ["/home/builder/build/build.sh"]
