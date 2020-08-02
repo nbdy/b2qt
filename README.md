@@ -1,5 +1,5 @@
 ### b2qt
-build a boot2qt image with docker
+build a boot2qt image with docker<br>
 this basically automates [these steps](https://doc.qt.io/QtForDeviceCreation/qtee-custom-embedded-linux-image.html)
 #### why?
 - i don't have a server running version < ubuntu focal (20)
