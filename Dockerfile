@@ -9,8 +9,13 @@ RUN apt-get update && \
 ENV LANG en_US.utf8
 
 RUN useradd builder -m && \
-    chown builder -R /home/builder
+    chown builder -R /home/builder && \
+    mkdir /home/builder/output
+
+ADD build/build.sh /home/builder/build.sh
+
+VOLUME /home/builder/output
 
 USER builder
 
-ENTRYPOINT ["/home/builder/build/build.sh"]
+ENTRYPOINT ["/home/builder/build.sh"]

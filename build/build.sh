@@ -14,9 +14,7 @@ elif [ $# -eq 2 ]; then
   MACHINE=$2
 fi
 
-echo ""
-
-cd /home/builder/build/
+cd /home/builder/
 
 git config --global color.ui false
 git config --global user.email "somebody@notme.ok"
@@ -27,3 +25,5 @@ repo sync
 export MACHINE="$MACHINE"
 source ./setup-environment.sh
 bitbake b2qt-embedded-qt5-image
+
+cp tmp/deploy/images/"$MACHINE"/b2qt-embedded-qt5-image-"$MACHINE".img output/"$MACHINE".img
