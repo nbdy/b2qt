@@ -16,7 +16,7 @@ fi
 
 echo ""
 
-cd /home/builder/
+cd /home/builder/build/
 
 git config --global color.ui false
 git config --global user.email "somebody@notme.ok"
