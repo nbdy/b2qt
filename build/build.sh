@@ -26,4 +26,4 @@ export MACHINE="$MACHINE"
 source ./setup-environment.sh
 bitbake b2qt-embedded-qt5-image
 
-cp /home/builder/build-"$MACHINE"/tmp/deploy/images/"$MACHINE"/b2qt-embedded-qt5-image-"$MACHINE".img output/"$MACHINE".img
+cp /home/builder/build-"$MACHINE"/tmp/deploy/images/"$MACHINE"/b2qt-embedded-qt5-image-"$MACHINE".img /home/builder/output/"$MACHINE".img
