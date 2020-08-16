@@ -26,4 +26,8 @@ export MACHINE="$MACHINE"
 source ./setup-environment.sh
 bitbake b2qt-embedded-qt5-image
 
-cp /home/builder/build-"$MACHINE"/tmp/deploy/images/"$MACHINE"/b2qt-embedded-qt5-image-"$MACHINE".img /home/builder/output/"$MACHINE".img
+SRC_IMAGE="/home/builder/$MACHINE/tmp/deploy/images/$MACHINE/b2qt-embedded-qt5-image-$MACHINE.img"
+TRGT_IMAGE="/home/builder/output/$MACHINE.img"
+
+echo "trying to copy '$SRC_IMAGE' to '$TRGT_IMAGE'"
+cp "$SRC_IMAGE" "$TRGT_IMAGE"
