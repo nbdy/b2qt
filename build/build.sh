@@ -30,4 +30,4 @@ SRC_IMAGE="/home/builder/$MACHINE/tmp/deploy/images/$MACHINE/b2qt-embedded-qt5-i
 TRGT_IMAGE="/home/builder/output/$MACHINE.img"
 
 echo "trying to copy '$SRC_IMAGE' to '$TRGT_IMAGE'"
-cp "$SRC_IMAGE" "$TRGT_IMAGE"
+sudo cp "$SRC_IMAGE" "$TRGT_IMAGE"
