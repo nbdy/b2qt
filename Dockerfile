@@ -10,6 +10,7 @@ ENV LANG en_US.utf8
 
 RUN useradd builder -m && \
     adduser builder sudo && \
+    echo "\nbuilder ALL=(ALL) NOPASSWD: ALL\n" > /etc/sudoers && \
     chown builder -R /home/builder && \
     mkdir /home/builder/output
 
