@@ -10,6 +10,6 @@ if [ $# -eq 1 ]; then QT_VERSION="$1"; elif [ $# -eq 2 ]; then QT_VERSION="$1"; 
 docker build -t b2qt .
 CID=$(docker run -d -t b2qt --name "$CID" "$QT_VERSION" "$MACHINE")
 
-SRC_IMAGE="/home/builder/$MACHINE/tmp/deploy/images/$MACHINE/b2qt-embedded-qt5-image-$MACHINE.img"
+SRC_DIR="/home/builder/$MACHINE/tmp/deploy/images/$MACHINE/"
 
-docker cp "$CID:$SRC_IMAGE" ./output/"$MACHINE".img
+docker cp -r "$CID:$SRC_DIR" ./output/"$MACHINE".img
