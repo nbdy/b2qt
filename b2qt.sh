@@ -12,4 +12,4 @@ CID=$(docker run -d -t b2qt --name "$CID" "$QT_VERSION" "$MACHINE")
 
 SRC_DIR="/home/builder/$MACHINE/tmp/deploy/images/$MACHINE/"
 
-docker cp -r "$CID:$SRC_DIR" ./output/"$MACHINE".img
+docker cp "$CID:$SRC_DIR" ./output/"$MACHINE".img
