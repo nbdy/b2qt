@@ -19,6 +19,6 @@ this basically automates [these steps](https://doc.qt.io/QtForDeviceCreation/qte
 ```
 
 #### output
-your image should be in the ./output/ directory<br>
+the output should be in ./output/{MACHINE}.img/<br>
 for example if you run the script with the default arguments<br>
-there should be a 'raspberrypi4.img' in ./output/
+there should be a 'raspberrypi4.img' directory in ./output/
